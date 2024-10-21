@@ -125,6 +125,7 @@ def type_gibberish(login, password):
 if __name__ == "__main__":
     open_page()
     while True:
-        if not type_gibberish(get_random_email(), get_random_password()):
-            open_page()
+        if "workshopstech" in driver.current_url:
+            if not type_gibberish(get_random_email(), get_random_password()):
+                open_page()
         time.sleep(5)
