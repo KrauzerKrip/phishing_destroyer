@@ -31,8 +31,6 @@ options.add_argument("--enable-javascript")
 options.headless = False
 #options.add_argument('--headless')
 #options.add_experimental_option("prefs", {"profile.default_content_setting_values.cookies": 1, "profile.block_third_party_cookies": False})
-br_ver = OperationSystemManager().get_browser_version_from_os(ChromeType.GOOGLE)
-version_main=int(br_ver.split('.')[0])
 driver = undetected_chromedriver.Chrome(options=options, seleniumwire_options=seleniumwire_options)
 
 def wait_element(driver, by : str, value : str) -> WebElement:
@@ -117,6 +115,7 @@ def type_gibberish(login, password):
         login_input.send_keys(login)
         password_input.send_keys(password)
         button = get_button()
+        button.click()
         return True
     except(Exception):
         traceback.print_exc()
