@@ -5,8 +5,6 @@ from selenium.webdriver import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.webelement import WebElement
-import chromedriver_autoinstaller as chromedriver_autoinstaller
-from webdriver_manager.core.os_manager import OperationSystemManager,ChromeType
 import selenium.common.exceptions
 import time
 import json
@@ -126,7 +124,6 @@ def type_gibberish(login, password):
 
 
 if __name__ == "__main__":
-    chromedriver_autoinstaller.install() 
     open_page()
     while True:
         if not type_gibberish(get_random_email(), get_random_password()):
