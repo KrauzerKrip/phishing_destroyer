@@ -17,7 +17,7 @@ import random
 import string
 import traceback
 
-url = ''
+url = 'https://login.workshopstech.com/openid/login/openidmodecheckid_setup_http3A2Fspecsopenid2Fauth2F20openid/nssreg=http3A2Fopenidnet3Fextensions1openi=optional/'
 
 login = "intelceleronherobrin@proton.me"
 seleniumwire_options = {
@@ -29,14 +29,13 @@ seleniumwire_options = {
 options = seleniumwire.webdriver.ChromeOptions()
 options.set_capability('pageLoadStrategy', "eager")
 options.add_argument('--ignore-certificate-errors')
-options.add_argument("--user-data-dir=D:\\Python\\rewards\\mr\\user_data\\" + login)
 options.add_argument("--enable-javascript")
 options.headless = False
 #options.add_argument('--headless')
 #options.add_experimental_option("prefs", {"profile.default_content_setting_values.cookies": 1, "profile.block_third_party_cookies": False})
 br_ver = OperationSystemManager().get_browser_version_from_os(ChromeType.GOOGLE)
 version_main=int(br_ver.split('.')[0])
-driver = undetected_chromedriver.Chrome(driver_executable_path="C:/Users/User/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe", options=options, seleniumwire_options=seleniumwire_options)
+driver = undetected_chromedriver.Chrome(options=options, seleniumwire_options=seleniumwire_options)
 
 def wait_element(driver, by : str, value : str) -> WebElement:
     while (True):
