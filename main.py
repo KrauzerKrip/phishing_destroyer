@@ -17,7 +17,7 @@ import random
 import string
 import traceback
 
-url = 'https://login.workshopstech.com/openid/login/openidmodecheckid_setup_http3A2Fspecsopenid2Fauth2F20openid/nssreg=http3A2Fopenidnet3Fextensions1openi=optional/'
+url = ''
 
 login = "intelceleronherobrin@proton.me"
 seleniumwire_options = {
